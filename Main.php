@@ -4,5 +4,6 @@ require __DIR__ . '/vendor/autoload.php';
 use GameProject\Connector;
 
 $db = Connector::getInstance();
+$users = $db->query('SELECT * FROM users');
 
-echo 'ok';
+print_r($users->fetchall());
