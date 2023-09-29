@@ -83,17 +83,17 @@ class Game {
 
     +__construct(): void
 
-    getId(): int
-    setId(): void
-    getName(): string
-    setName(string name): void
-    getOnlineStatus(): boolean
-    setOnlineStatus(boolean status): void
-    getMinPlayer(): int
-    setMinPlayer(int number): void
-    getMaxPlayer(): int
-    setMaxPlayer(int number): void
-    getAgeRestriction(): int
-    setAgeRestriction(int age): void
+    +getId(): int
+    +setId(): void
+    +getName(): string
+    +setName(string name): void
+    +getOnlineStatus(): boolean
+    +setOnlineStatus(boolean status): void
+    +getMinPlayer(): int
+    +setMinPlayer(int number): void
+    +getMaxPlayer(): int
+    +setMaxPlayer(int number): void
+    +getAgeRestriction(): int
+    +setAgeRestriction(int age): void
 }
 ```

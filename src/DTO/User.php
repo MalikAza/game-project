@@ -16,7 +16,10 @@ class User {
     // TODO: private PaymentMethod $favoritePaymentMethod;
     private string $role;
 
-    public function __construct(array $data) {
+    public function __construct() {
+    }
+
+    public function __populate(array $data) {
         $this->id = $data['id'];
         $this->email = $data['email'];
         $this->pseudo = $data['pseudo'];
@@ -41,16 +44,20 @@ class User {
         return $this->email;
     }
 
-    public function setEmail(string $email): void {
+    public function setEmail(string $email): User {
+        $this->email = $email;
 
+        return $this;
     }
 
     public function getPseudo(): string {
         return $this->pseudo;
     }
 
-    public function setPseudo(string $pseudo): void {
+    public function setPseudo(string $pseudo): User {
+        $this->pseudo = $pseudo;
 
+        return $this;
     }
 
     public function getAvatar(): string {
@@ -65,16 +72,20 @@ class User {
         return $this->birth;
     }
 
-    public function setBirth(DateTime $birth) {
+    public function setBirth(DateTime $birth): User {
+        $this->birth = $birth;
 
+        return $this;
     }
 
     public function getPassword(): string {
         return $this->password;
     }
 
-    public function setPassword(string $password): void {
+    public function setPassword(string $password): User {
+        $this->password = $password;
 
+        return $this;
     }
 
     public function getParentalValidation(): DateTime {
