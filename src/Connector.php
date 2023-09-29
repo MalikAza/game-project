@@ -9,10 +9,10 @@ class Connector extends PDO {
     private string $port = "6603";
     private string $dbName = "game_project";
 
-    private static PDO $instance;
+    private static Connector $instance;
 
     private function __construct() {
-        self::$instance = parent::__construct(
+        parent::__construct(
             "mysql:host={$this->host};port={$this->port};dbname={$this->dbName}",
             'root',
             'helloworld'
@@ -20,7 +20,7 @@ class Connector extends PDO {
     }
 
     public static function getInstance() {
-        if (!isset(self::$instance)) new Connector();
+        if (!isset(self::$instance)) self::$instance = new Connector();
 
         return self::$instance;
     }

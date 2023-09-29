@@ -1,9 +1,14 @@
 <?php
+
+use GameProject\DAO\UserDAO;
+
 require __DIR__ . '/vendor/autoload.php';
 
-use GameProject\Connector;
+$userDb = new UserDAO;
 
-$db = Connector::getInstance();
-$users = $db->query('SELECT * FROM users');
+$usersPseudos = [];
+foreach ($userDb->getAll() as $user) {
+    $usersPseudos[] = $user->getPseudo();
+}
 
-print_r($users->fetchall());
+echo join(', ', $usersPseudos);
