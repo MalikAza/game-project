@@ -1,0 +1,16 @@
+{
+    "name": "aza/game-project",
+    "description": "School project to study MySQL server",
+    "autoload": {
+        "psr-4": {
+            "Aza\\GameProject\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dakota",
+            "email": "dakota.froissart@le-campus-numerique.fr"
+        }
+    ],
+    "require": {}
+}
