@@ -3,7 +3,7 @@
     "description": "School project to study MySQL server",
     "autoload": {
         "psr-4": {
-            "Aza\\GameProject\\": "src/"
+            "GameProject\\": "src/"
         }
     },
     "authors": [
